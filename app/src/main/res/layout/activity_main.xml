@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/def2"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:fitsSystemWindows="true"
+        android:layoutDirection="rtl"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/headerBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@color/first_dark"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/header" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ذخیره اطلاعات در کارت"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/golden_card"/>
+
+    <!-- متنی که می‌گوید کارت را قرار دهید -->
+    <TextView
+        android:id="@+id/textstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/def"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:textSize="18dp"
+        android:shadowColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- دیالوگ اطلاعات کارت -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardElevation="22dp"
+        app:cardCornerRadius="20dp"
+        android:visibility="gone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_buttons_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="اطلاعات موجود در کارت"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="top|center_horizontal"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="70dp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="اطلاعاتی وجود ندارد کارت را پشت گوشی قرار دهید"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"></TextView>
+
+        </androidx.cardview.widget.CardView>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:gravity="center"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/text1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_background"
+                android:textColor="@color/normal_button_color"
+                android:gravity="center"
+                android:text="متن"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/button_background"
+                android:textColor="@color/normal_button_color"
+                android:gravity="center"
+                android:text="لینک"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:id="@+id/text3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:background="@drawable/button_background"
+                android:textColor="@color/normal_button_color"
+                android:text="مخاطبین"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp" />
+
+            <Button
+                android:id="@+id/text4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:text="ایمیل"
+                android:background="@drawable/button_background"
+                android:textColor="@color/normal_button_color"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:id="@+id/text5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:background="@drawable/button_background"
+                android:textColor="@color/normal_button_color"
+                android:text="تلفن"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:id="@+id/text6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@drawable/button_background"
+                android:textColor="@color/normal_button_color"
+                android:gravity="center"
+                android:text="لوکیشن"
+                android:textSize="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+        </GridLayout>
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center|bottom"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:maxLength="100"
+            android:background="@drawable/box_gray"
+            android:layout_marginBottom="90dp"/>
+
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_background2"
+            android:textColor="@color/white"
+            android:text="ذخیره" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- بخش دکمه‌های پایین (به صورت دو ردیفه) -->
+    <LinearLayout
+        android:id="@+id/bottom_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layoutDirection="rtl"
+        android:layout_marginBottom="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- ردیف اول: دکمه پرسنلی -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <!-- این View یک فضای خالی دقیقاً هم‌اندازه دکمه "خواندن" ایجاد می‌کند تا دکمه پرسنلی هول داده شود روی دکمه "نوشتن" -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="پرسنلی"
+                android:textColor="@color/normal_button_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- ردیف دوم: دکمه‌های خواندن و نوشتن -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_read"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="خواندن"
+                android:textColor="@color/normal_button_color"
+                android:textSize="16sp"
+                android:layout_marginEnd="5dp" />
+
+            <Button
+                android:id="@+id/btn_write"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:text="نوشتن"
+                android:textColor="@color/normal_button_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

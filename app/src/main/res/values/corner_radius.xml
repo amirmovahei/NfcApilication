@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="card_corner_radius">10dp</dimen>
+    <dimen name="card_stroke_width">2dp</dimen>
+    <dimen name="card_corner_radius2">20dp</dimen>
+    <dimen name="card_corner_radius3">2000dp</dimen>
+    <dimen name="card_corner_radius4">6dp</dimen>
+</resources>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">nfc</string>
+    <string name="errorText" translatable="false">کاربر گرامی ضمن عرض پوزش، به علت بروز نقص فنی، در حال حاضر برنامه قادر به انجام درخواست شما نمیباشد. لطفا در زمانی دیگر مجددا تلاش فرمایید. از همراهی شما سپاسگزاریم.</string>
+</resources>
